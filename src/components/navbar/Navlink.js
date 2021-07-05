@@ -38,7 +38,7 @@ const mystyle = {
   fontSize: "inherit"
 };
 
-const Navlink = () => {
+const Navlink = (isComponent) => {
     return (
         <NavLinksContainer>
             <LinksWrapper>

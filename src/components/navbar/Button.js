@@ -47,7 +47,7 @@ const LoginButton = styled.button`
   }
 `;
 
-const Button = () => {
+const Button = (props) => {
     return (
         <AccessibilityContainer>
             <RegisterButton>Register</RegisterButton>

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Logo from '../logo/Logo';
 import Button from './Button';
 import Navlink from './Navlink';
+import MobileNavLink from './MobileNavLink';
+import { useMediaQuery } from "react-responsive";
 
 const NavbarContainer = styled.div`
     width: 96.5%;
@@ -29,16 +31,16 @@ const RightSection = styled.div`
 `;
 
 const Navbar = () => {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
     return (
         <NavbarContainer>
             <LeftSection>
                 <Logo/>
             </LeftSection>
-            <MiddleSection>
-                <Navlink/>
-            </MiddleSection>
+            <MiddleSection>{!isMobile && <Navlink />}</MiddleSection>
             <RightSection>
-                <Button/>
+                {!isMobile && <Button />}
+                {isMobile && <MobileNavLink />}
             </RightSection>
         </NavbarContainer>
     )

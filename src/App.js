@@ -12,16 +12,16 @@ function App() {
       <Router>
       <Navbar/>
       <Switch>
-        <Route path="/" component={Home} exact>
+        <Route exact path="/" component={Home}>
           <Home/>
         </Route>
-        <Route path="/about" component={About} exact>
+        <Route exact path="/about" component={About}>
           <About/>
         </Route>
-        <Route path="/products" component={Products} exact>
+        <Route exact path="/products" component={Products}>
           <Products/>
         </Route>
-        <Route path="/contact" component={Contact} exact>
+        <Route exact path="/contact" component={Contact}>
           <Contact/>
         </Route>
       </Switch>
