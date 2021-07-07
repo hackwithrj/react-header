@@ -20,7 +20,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 65px;
+  top: 61.5px;
   left: 0;
 `;
 
@@ -47,13 +47,15 @@ const mystyle = {
 const MobileNavLink = (props) => {
     const [isOpen, setOpen] = useState(false);
     const [isComponent, setComponent] = useState(false);
-    console.log("iscomponent", isComponent);
-    console.log('isopen',isOpen);
     const onClickChanges = () => {
+        console.log("iscomponent", isComponent);
+        console.log('isopen',isOpen);  
         setOpen(!isOpen);
         setComponent(false);
     }
     const onLinkClickChanges = () => {
+        // console.log("iscomponent", isComponent);
+        // console.log('isopen',isOpen);  
         setComponent(true);
         setOpen(false);
     }
@@ -65,16 +67,16 @@ const MobileNavLink = (props) => {
                 {isComponent ? null : (
                   <LinksWrapper>
                     <LinkItem>
-                      <Link to={{ pathname:"/",state: { show: !isComponent } }}style={mystyle} onClick={onLinkClickChanges}>Home</Link>
+                      <Link to={{ pathname:"/" }}style={mystyle} onClick={onLinkClickChanges}>Home</Link>
                       </LinkItem>
                       <LinkItem>
-                        <Link to={{ pathname:"/products",state: { show: !isComponent } }} style={mystyle} onClick={onLinkClickChanges }>Products</Link>
+                        <Link to={{ pathname:"/products" }} style={mystyle} onClick={onLinkClickChanges }>Products</Link>
                       </LinkItem>
                       <LinkItem>
-                        <Link to={{ pathname:"/about",state: { show: !isComponent } }} style={mystyle} onClick={onLinkClickChanges} >About</Link>
+                        <Link to={{ pathname:"/about" }} style={mystyle} onClick={onLinkClickChanges} >About</Link>
                       </LinkItem>
                       <LinkItem>
-                        <Link to={{ pathname:"/contact",state: { show: !isComponent } }} style={mystyle} onClick={onLinkClickChanges} >Contact</Link>
+                        <Link to={{ pathname:"/contact" }} style={mystyle} onClick={onLinkClickChanges} >Contact</Link>
                       </LinkItem>
                     <Marginer />
                     <Button />

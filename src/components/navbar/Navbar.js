@@ -7,7 +7,7 @@ import MobileNavLink from './MobileNavLink';
 import { useMediaQuery } from "react-responsive";
 
 const NavbarContainer = styled.div`
-    width: 96.5%;
+    width: 100%;
     height: 60px;
     box-shadow: 0 1px 3px rgba(15,15,15,0.15);
     display:flex;
